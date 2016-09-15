@@ -1,7 +1,6 @@
 package com.github.hiiok.simpleweather.gui;
 
 import java.awt.GridBagConstraints;
-
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 

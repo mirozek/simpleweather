@@ -5,9 +5,7 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import javax.swing.JButton;
 import javax.swing.JTextField;
-
 import org.json.JSONException;
-
 import com.github.hiiok.simpleweather.networking.ConnectionLogic;
 
 public class WeatherButton {
@@ -38,13 +36,6 @@ public class WeatherButton {
 				try {
 					// get walue of temperature;
 					String getTemp = ConnectionLogic.getTempFromZipCode(zipCode);
-					
-					// changing *c to F made error;
-					//double prasFahr = Double.parseDouble(getTemp);
-					//double toCel = ((prasFahr - 32) * 5) / 9;
-					// String prasedCel = String.valueOf(toCel);
-					// temp is in Farh
-					//String valueTemp = String.valueOf(toCel);
 					getTemperatureTextField.setText(getTemp);
 
 					// get walue of wind:speed;

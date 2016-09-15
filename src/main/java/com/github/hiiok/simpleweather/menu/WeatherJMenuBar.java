@@ -3,7 +3,6 @@ package com.github.hiiok.simpleweather.menu;
 import javax.swing.JMenuBar;
 
 public class WeatherJMenuBar {
-
 	private JMenuBar menuBar;
 
 	public JMenuBar createMenuBar() {
@@ -15,6 +14,5 @@ public class WeatherJMenuBar {
 		menuBar.add(weatherjmenucomp.createWeatherHelpMenu());
 
 		return menuBar;
-
 	}
 }

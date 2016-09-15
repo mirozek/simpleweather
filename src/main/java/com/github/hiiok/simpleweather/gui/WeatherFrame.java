@@ -2,7 +2,6 @@ package com.github.hiiok.simpleweather.gui;
 
 import java.awt.GridBagLayout;
 import javax.swing.JFrame;
-
 import com.github.hiiok.simpleweather.menu.WeatherJMenuBar;
 
 public class WeatherFrame {

@@ -2,9 +2,7 @@ package com.github.hiiok.simpleweather.actionListenerLogic;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JOptionPane;
-
 import com.github.hiiok.simpleweather.menu.WeatherJMenuItem;
 
 public class JMenuItemMethod extends WeatherJMenuItem implements ActionListener {
@@ -20,11 +18,6 @@ public class JMenuItemMethod extends WeatherJMenuItem implements ActionListener 
 			JOptionPane.showMessageDialog(null, "That is simple weather app.");
 
 		}
-
-		if (getActEvent == refresh) {
-			
-		}
-
 	}
 
 }

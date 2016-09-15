@@ -11,23 +11,15 @@ public class WeatherJMenu {
 	WeatherJMenuItem weatherJMenuItem = new WeatherJMenuItem();
 
 	public JMenu createWeatherMenu() {
-		// add weatherJMenuItems save and exit
-
 		menu = new JMenu("Menu");
-		menu.add(weatherJMenuItem.createSaveMenu());
-		menu.addSeparator();
 		menu.add(weatherJMenuItem.createExitMenu());
-
 		return menu;
 	}
 
 	public JMenu createWeatherHelpMenu() {
-		// add weatherJMenuItems about
-
 		help = new JMenu("Help");
 		help.add(weatherJMenuItem.createAboutMenu());
 		help.addActionListener(new JMenuItemMethod());
-
 		return help;
 	}
 }

@@ -18,6 +18,7 @@ import com.github.hiiok.simpleweather.gui.WeatherTextPane;
 public class GuiLauncher {
 
 	public GuiLauncher() {
+		
 		WeatherFrame weatherFrames = new WeatherFrame();
 		JFrame mainWindow = weatherFrames.createMainWindow();
 		
