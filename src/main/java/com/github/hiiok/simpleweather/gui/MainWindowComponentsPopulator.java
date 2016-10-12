@@ -21,7 +21,8 @@ public class MainWindowComponentsPopulator {
 		parent.add(component, constraints);
 	}
 
-	public MainWindowComponentSpec arrangeComponent(int gridx, int gridy, GridBagConstraints constraints, JFrame parent, JComponent component) {
+	public MainWindowComponentSpec arrangeComponent(int gridx, int gridy, GridBagConstraints constraints, JFrame parent,
+			JComponent component) {
 		MainWindowComponentSpec mainWindowComponentSpec = new MainWindowComponentSpec();
 		mainWindowComponentSpec.setFill(GridBagConstraints.CENTER);
 		mainWindowComponentSpec.setGridx(gridx);

@@ -4,30 +4,28 @@ import javax.swing.JLabel;
 
 public class WeatherLabel {
 
-	private JLabel signZipCode, Wind, temperature, PressureLabel, cityName;
+	private JLabel signZipCode, wind, temperature, pressureLabel, cityName;
 
 	public JLabel createZipCodeLabel() {
 		signZipCode = new JLabel("Enter your zip code:");
 		return signZipCode;
 	}
-	
+
 	public JLabel createCityNameLabel() {
 		cityName = new JLabel("City Name:");
 		return cityName;
 	}
-	
-	
-	public JLabel createPressureLabel(){
-		PressureLabel = new JLabel("Pressure: ");
-		return PressureLabel;
+
+	public JLabel createPressureLabel() {
+		pressureLabel = new JLabel("Pressure: ");
+		return pressureLabel;
 	}
 
 	public JLabel createWindLabel() {
-		Wind = new JLabel("Wind:");
-		Wind.setVisible(true);
-		return Wind;
+		wind = new JLabel("Wind:");
+		wind.setVisible(true);
+		return wind;
 	}
-	
 
 	public JLabel createTemperature() {
 		temperature = new JLabel("Temperature:");

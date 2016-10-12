@@ -6,12 +6,10 @@ import com.github.hiiok.simpleweather.gui.WeatherTextPane;
 
 public class JTextFieldMethod extends WeatherTextPane implements ActionListener {
 
-	public static String prasedZipCode;
+	public String prasedZipCode;
 
 	public void actionPerformed(ActionEvent e) {
-
 		Object getActEvent = e.getSource();
-
 		if (getActEvent == textZipCode) {
 			prasedZipCode = textZipCode.getText();
 		}
