@@ -10,7 +10,7 @@ public class WeatherTextPane {
 	protected JFormattedTextField textZipCode;
 	 
 	public JTextField createZipCodeTextPane() {
-		textZipCode = new JFormattedTextField(createFormatter("#####"));
+		textZipCode = new JFormattedTextField(createFormatter("##-###"));
 		textZipCode.setColumns(6);
 		textZipCode.setToolTipText("Enter here ZipCode");
 		textZipCode.addActionListener(new JTextFieldMethod());
