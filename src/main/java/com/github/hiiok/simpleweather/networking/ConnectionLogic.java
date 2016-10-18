@@ -13,8 +13,8 @@ public class ConnectionLogic extends JTextFieldMethod {
 	private static Double temperature, wind, pressure;
 	private static String cityName;
 
-	// geting temp
-	public static String getTempFromZipCode(String zipCode) throws IOException, JSONException {
+								// get temperature
+	public static synchronized String getTempFromZipCode(String zipCode) throws IOException, JSONException {
 		String url = createWeatherForecastUrl(zipCode);
 		String json;
 
@@ -32,8 +32,8 @@ public class ConnectionLogic extends JTextFieldMethod {
 		return null;
 	}
 
-	// get pressure
-	public static String getPressureFromZipCode(String zipCode) throws IOException, JSONException {
+								// get pressure
+	public static synchronized String getPressureFromZipCode(String zipCode) throws IOException, JSONException {
 		String url = createWeatherForecastUrl(zipCode);
 		String json;
 
@@ -50,8 +50,8 @@ public class ConnectionLogic extends JTextFieldMethod {
 		return null;
 	}
 
-	// geting city name
-	public static String getCityNameFromZipCode(String zipCode) throws IOException, JSONException {
+								// get city name
+	public static synchronized String getCityNameFromZipCode(String zipCode) throws IOException, JSONException {
 		String url = createWeatherForecastUrl(zipCode);
 		final String json;
 
@@ -69,8 +69,8 @@ public class ConnectionLogic extends JTextFieldMethod {
 		return null;
 	}
 
-	// geting wind speed
-	public static String getWindFromZipCode(String zipCode) throws IOException, JSONException {
+								// get wind speed
+	public static synchronized String getWindFromZipCode(String zipCode) throws IOException, JSONException {
 		String url = createWeatherForecastUrl(zipCode);
 		String json;
 
@@ -91,7 +91,7 @@ public class ConnectionLogic extends JTextFieldMethod {
 				+ ",pl&appid=4b26fe53e5ee3e594d2309d461bb7ce3";
 	}
 
-	private static String readUrl(String urlString) throws Exception {
+	private static synchronized String readUrl(String urlString) throws Exception {
 		BufferedReader reader = null;
 		try {
 			URL url = new URL(urlString);
