@@ -1,57 +1,56 @@
 package com.github.hiiok.simpleweather.gui;
 
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.IOException;
 import java.util.Map;
 
 import javax.swing.JButton;
 import javax.swing.JTextField;
-import org.json.JSONException;
+
+import com.github.hiiok.simpleweather.dto.WeatherResult;
 import com.github.hiiok.simpleweather.networking.ConnectionLogic;
 
 public class WeatherComponent {
 
-	public JButton weatherComponent;
-	Map<String, JTextField> textFields;
+    public JButton weatherComponent;
+    Map<String, JTextField> textFields;
 
-	public WeatherComponent(Map<String, JTextField> textFields) {
-		weatherComponent = new JButton("Get Weather");
-		this.textFields = textFields;
-	}
+    public WeatherComponent(Map<String, JTextField> textFields) {
+        weatherComponent = new JButton("Get Weather");
+        this.textFields = textFields;
+    }
 
-	public JButton createWeatherComponent() {
+    public JButton createWeatherComponent() {
+// Method Reference
+        weatherComponent.addActionListener(this::createListener);
 
-		weatherComponent.addActionListener(new ActionListener() {
-			
-			public void actionPerformed(ActionEvent e) {
+        return weatherComponent;
+    }
 
-				String zipCode = textFields.get("zipCodeTextField").getText();
+    private void createListener(ActionEvent event) {
+        String zipCode = textFields.get("zipCodeTextField").getText();
+        if (!zipCode.matches("\\d{2,2}-\\d{3,3}")) {
+            return;
+        }
+        // get value of temperature;
+        ConnectionLogic conn = new ConnectionLogic(zipCode);
+        if (conn == null) {
+            return;
+        }
+        WeatherResult weatherResult = conn.getWeatherResult();
 
-				try {
-					// get value of temperature;
-					String getTemp = ConnectionLogic.getTempFromZipCode(zipCode);
-					textFields.get("temperatureTextField").setText(getTemp);
+        String getTemp = weatherResult.getTemp();
+        textFields.get("temperatureTextField").setText(getTemp);
 
-					// get value of wind:speed;
-					String getWind = ConnectionLogic.getWindFromZipCode(zipCode);
-					textFields.get("windTextField").setText(getWind);
+        // get value of wind:speed;
+        String getWind = weatherResult.getWindSpeed();
+        textFields.get("windTextField").setText(getWind);
 
-					// get value of city name
-					String getCityName = ConnectionLogic.getCityNameFromZipCode(zipCode);
-					textFields.get("cityNameTextField").setText(getCityName);
+        // get value of city name
+        String getCityName = weatherResult.getCityName();
+        textFields.get("cityNameTextField").setText(getCityName);
 
-					// get value of pressure
-					String getPressure = ConnectionLogic.getPressureFromZipCode(zipCode);
-					textFields.get("pressureTextField").setText(getPressure);
-				} catch (JSONException e1) {
-					e1.printStackTrace();
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
-			}
-		});
-
-		return weatherComponent;
-	}
+        // get value of pressure
+        String getPressure = weatherResult.getPressure();
+        textFields.get("pressureTextField").setText(getPressure);
+    }
 }

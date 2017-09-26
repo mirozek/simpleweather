@@ -1,37 +1,37 @@
 package com.github.hiiok.simpleweather.gui;
 
-import javax.swing.JTextField;
+import com.github.hiiok.simpleweather.actionListenerLogic.JTextFieldMethod;
 
-import com.github.hiiok.simpleweather.networking.ConnectionLogic;
+import javax.swing.*;
 
-public class WeatherText extends ConnectionLogic {
-	private JTextField getCity, getWind, getPressure, getTemp;
+public class WeatherText extends JTextFieldMethod {
+    private JTextField getCity, getWind, getPressure, getTemp;
 
-	public JTextField createCityName() {
-		getCity = new JTextField();
-		getCity.setColumns(6);
-		getCity.setEditable(false);
-		return getCity;
-	}
+    public JTextField createCityName() {
+        getCity = new JTextField();
+        getCity.setColumns(6);
+        getCity.setEditable(false);
+        return getCity;
+    }
 
-	public JTextField createWind() {
-		getWind = new JTextField();
-		getWind.setColumns(6);
-		getWind.setEditable(false);
-		return getWind;
-	}
+    public JTextField createWind() {
+        getWind = new JTextField();
+        getWind.setColumns(6);
+        getWind.setEditable(false);
+        return getWind;
+    }
 
-	public JTextField createPressure() {
-		getPressure = new JTextField();
-		getPressure.setColumns(6);
-		getPressure.setEditable(false);
-		return getPressure;
-	}
+    public JTextField createPressure() {
+        getPressure = new JTextField();
+        getPressure.setColumns(6);
+        getPressure.setEditable(false);
+        return getPressure;
+    }
 
-	public JTextField createTemperature() {
-		getTemp = new JTextField();
-		getTemp.setColumns(6);
-		getTemp.setEditable(false);
-		return getTemp;
-	}
+    public JTextField createTemperature() {
+        getTemp = new JTextField();
+        getTemp.setColumns(6);
+        getTemp.setEditable(false);
+        return getTemp;
+    }
 }

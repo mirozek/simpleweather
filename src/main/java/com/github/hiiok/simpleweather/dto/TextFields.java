@@ -8,7 +8,7 @@ import com.github.hiiok.simpleweather.gui.WeatherText;
 
 public class TextFields {
 
-	private Map<String, JTextField> textFields = new HashMap<String, JTextField>();
+	private Map<String, JTextField> textFields = new HashMap<>();
 	private WeatherText weatherText;
 	
 	public TextFields(WeatherText weatherTex){
