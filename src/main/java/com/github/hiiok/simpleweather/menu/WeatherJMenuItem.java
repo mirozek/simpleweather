@@ -5,7 +5,13 @@ import com.github.hiiok.simpleweather.actionListenerLogic.JMenuItemMethod;
 
 public class WeatherJMenuItem {
 
-	public static JMenuItem about, exit;
+	public static JMenuItem about, exit, save;
+
+	public JMenuItem createSaveMenu() {
+		save = new JMenuItem("Save");
+		save.addActionListener(new JMenuItemMethod());
+		return save;
+	}
 
 	public JMenuItem createExitMenu() {
 		exit = new JMenuItem("Exit");

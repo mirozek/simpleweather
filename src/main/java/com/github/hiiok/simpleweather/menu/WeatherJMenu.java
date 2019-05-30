@@ -12,6 +12,7 @@ public class WeatherJMenu {
 
 	public JMenu createWeatherMenu() {
 		menu = new JMenu("Menu");
+		menu.add(weatherJMenuItem.createSaveMenu());
 		menu.add(weatherJMenuItem.createExitMenu());
 		return menu;
 	}
