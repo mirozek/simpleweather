@@ -8,7 +8,7 @@ import java.net.URL;
 import com.github.hiiok.simpleweather.dto.WeatherResult;
 import org.json.JSONObject;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
 
 public class ConnectionLogic {
     private JSONObject jsonObject;
