@@ -1,20 +1,20 @@
 package com.github.hiiok.simpleweather.networking;
 
+import com.github.hiiok.simpleweather.dto.WeatherResult;
+import org.json.JSONObject;
+
+import javax.swing.JOptionPane;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-import com.github.hiiok.simpleweather.dto.WeatherResult;
-import org.json.JSONObject;
-
-import javax.swing.JOptionPane;
-
-public class ConnectionLogic {
+public class ConnectionLogic implements InterfaceWeatherForecastURL {
     private JSONObject jsonObject;
+    private final double Kelwin = 237.15;
 
     public ConnectionLogic(String zipCode) {
-        String url = createWeatherForecastUrl(zipCode);
+        String url = InterfaceWeatherForecastURL.createWeatherForecastUrl(zipCode);
         try {
             String result = readUrl(url);
             if (result == null) {
@@ -22,9 +22,18 @@ public class ConnectionLogic {
             }
             jsonObject = new JSONObject(result);
 
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        } catch (ArithmeticException e) {
+            e.printStackTrace();
+        } catch (RuntimeException e) {
+            e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     public WeatherResult getWeatherResult() {
@@ -38,7 +47,7 @@ public class ConnectionLogic {
 
     private String getTemp() {
         double temp = jsonObject.getJSONObject("main").getDouble("temp");
-        return String.format("%.1f C", temp - 237.15);
+        return String.format("%.1f C", temp - Kelwin);
     }
 
     private String getPressure() {
@@ -56,10 +65,6 @@ public class ConnectionLogic {
     }
 
 
-    private static String createWeatherForecastUrl(String zipCode) {
-        return "http://api.openweathermap.org/data/2.5/weather?zip=" + zipCode
-                + ",pl&appid=4b26fe53e5ee3e594d2309d461bb7ce3";
-    }
 
     private static synchronized String readUrl(String urlString) throws Exception {
         BufferedReader reader = null;
@@ -75,7 +80,7 @@ public class ConnectionLogic {
             return buffer.toString();
         } catch (FileNotFoundException e) {
 //            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "ZipCode");
+            JOptionPane.showMessageDialog(null, "Wrong ZipCode!");
         } finally {
             if (reader != null)
                 reader.close();
