@@ -1,4 +1,4 @@
-package com.github.hiiok.simpleweather;
+package com.github.mirozek.simpleweather;
 
 import java.awt.GridBagConstraints;
 import java.util.Map;
@@ -7,8 +7,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import com.github.hiiok.simpleweather.dto.TextFields;
-import com.github.hiiok.simpleweather.gui.MainWindowComponentsPopulator;
+import com.github.mirozek.simpleweather.dto.TextFields;
+import com.github.mirozek.simpleweather.gui.MainWindowComponentsPopulator;
 
 public class MainWindowLayoutDetails {
 	public JFrame mainWindow;

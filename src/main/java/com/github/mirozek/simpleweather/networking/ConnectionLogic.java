@@ -1,6 +1,6 @@
-package com.github.hiiok.simpleweather.networking;
+package com.github.mirozek.simpleweather.networking;
 
-import com.github.hiiok.simpleweather.dto.WeatherResult;
+import com.github.mirozek.simpleweather.dto.WeatherResult;
 import org.json.JSONObject;
 
 import javax.swing.JOptionPane;

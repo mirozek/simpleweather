@@ -1,7 +1,8 @@
-package com.github.hiiok.simpleweather.menu;
+package com.github.mirozek.simpleweather.menu;
 
 import javax.swing.JMenuItem;
-import com.github.hiiok.simpleweather.actionListenerLogic.JMenuItemMethod;
+
+import com.github.mirozek.simpleweather.actionListenerLogic.JMenuItemMethod;
 
 public class WeatherJMenuItem {
 

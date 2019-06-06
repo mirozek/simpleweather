@@ -1,6 +1,6 @@
-package com.github.hiiok.simpleweather.gui;
+package com.github.mirozek.simpleweather.gui;
 
-import com.github.hiiok.simpleweather.actionListenerLogic.JTextFieldMethod;
+import com.github.mirozek.simpleweather.actionListenerLogic.JTextFieldMethod;
 
 import javax.swing.*;
 

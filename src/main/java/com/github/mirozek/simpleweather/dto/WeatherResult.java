@@ -1,4 +1,4 @@
-package com.github.hiiok.simpleweather.dto;
+package com.github.mirozek.simpleweather.dto;
 
 public class WeatherResult {
     private String cityName;

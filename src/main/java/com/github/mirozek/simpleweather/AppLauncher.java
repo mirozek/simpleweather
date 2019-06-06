@@ -1,4 +1,4 @@
-package com.github.hiiok.simpleweather;
+package com.github.mirozek.simpleweather;
 
 import javax.swing.SwingUtilities;
 

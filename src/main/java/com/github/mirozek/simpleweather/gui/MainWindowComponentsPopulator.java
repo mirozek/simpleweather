@@ -1,4 +1,4 @@
-package com.github.hiiok.simpleweather.gui;
+package com.github.mirozek.simpleweather.gui;
 
 import java.awt.GridBagConstraints;
 import javax.swing.JComponent;

@@ -1,4 +1,4 @@
-package com.github.hiiok.simpleweather.menu;
+package com.github.mirozek.simpleweather.menu;
 
 import javax.swing.JMenuBar;
 

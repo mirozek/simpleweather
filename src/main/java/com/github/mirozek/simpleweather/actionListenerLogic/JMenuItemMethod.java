@@ -1,9 +1,10 @@
-package com.github.hiiok.simpleweather.actionListenerLogic;
+package com.github.mirozek.simpleweather.actionListenerLogic;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import com.github.hiiok.simpleweather.menu.WeatherJMenuItem;
+
+import com.github.mirozek.simpleweather.menu.WeatherJMenuItem;
 
 public class JMenuItemMethod extends WeatherJMenuItem implements ActionListener {
 

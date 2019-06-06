@@ -1,4 +1,4 @@
-package com.github.hiiok.simpleweather;
+package com.github.mirozek.simpleweather;
 
 import java.awt.GridBagConstraints;
 import java.util.Map;
@@ -7,16 +7,16 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import com.github.hiiok.simpleweather.dto.Labels;
-import com.github.hiiok.simpleweather.dto.MainWindowComponentDetails;
-import com.github.hiiok.simpleweather.dto.MainWindowLayout;
-import com.github.hiiok.simpleweather.dto.TextFields;
-import com.github.hiiok.simpleweather.gui.MainWindowComponentSpec;
-import com.github.hiiok.simpleweather.gui.MainWindowComponentsPopulator;
-import com.github.hiiok.simpleweather.gui.WeatherComponent;
-import com.github.hiiok.simpleweather.gui.WeatherFrame;
-import com.github.hiiok.simpleweather.gui.WeatherLabel;
-import com.github.hiiok.simpleweather.gui.WeatherText;
+import com.github.mirozek.simpleweather.dto.Labels;
+import com.github.mirozek.simpleweather.dto.MainWindowComponentDetails;
+import com.github.mirozek.simpleweather.dto.MainWindowLayout;
+import com.github.mirozek.simpleweather.dto.TextFields;
+import com.github.mirozek.simpleweather.gui.MainWindowComponentSpec;
+import com.github.mirozek.simpleweather.gui.MainWindowComponentsPopulator;
+import com.github.mirozek.simpleweather.gui.WeatherComponent;
+import com.github.mirozek.simpleweather.gui.WeatherFrame;
+import com.github.mirozek.simpleweather.gui.WeatherLabel;
+import com.github.mirozek.simpleweather.gui.WeatherText;
 
 public class GuiLauncher {
 

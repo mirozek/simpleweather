@@ -1,18 +1,15 @@
-package com.github.hiiok.simpleweather.dto;
+package com.github.mirozek.simpleweather.dto;
 
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.JLabel;
 
-import com.github.hiiok.simpleweather.gui.WeatherLabel;
+import com.github.mirozek.simpleweather.gui.WeatherLabel;
 
 public class Labels {
 
 	private Map<String, JLabel> labels = new HashMap<String, JLabel>();
 	private WeatherLabel weatherLabel;
-
-	public Labels() {
-	}
 
 	public Labels(WeatherLabel weatherLabel) {
 		this.weatherLabel = weatherLabel;

@@ -1,4 +1,4 @@
-package com.github.hiiok.simpleweather.gui;
+package com.github.mirozek.simpleweather.gui;
 
 import java.awt.event.ActionEvent;
 import java.util.Map;
@@ -6,8 +6,8 @@ import java.util.Map;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
-import com.github.hiiok.simpleweather.dto.WeatherResult;
-import com.github.hiiok.simpleweather.networking.ConnectionLogic;
+import com.github.mirozek.simpleweather.dto.WeatherResult;
+import com.github.mirozek.simpleweather.networking.ConnectionLogic;
 
 public class WeatherComponent {
 
@@ -20,7 +20,6 @@ public class WeatherComponent {
     }
 
     public JButton createWeatherComponent() {
-// Method Reference
         weatherComponent.addActionListener(this::createListener);
 
         return weatherComponent;

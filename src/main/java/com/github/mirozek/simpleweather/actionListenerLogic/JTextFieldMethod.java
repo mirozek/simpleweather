@@ -1,8 +1,9 @@
-package com.github.hiiok.simpleweather.actionListenerLogic;
+package com.github.mirozek.simpleweather.actionListenerLogic;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import com.github.hiiok.simpleweather.gui.WeatherTextPane;
+
+import com.github.mirozek.simpleweather.gui.WeatherTextPane;
 
 public class JTextFieldMethod extends WeatherTextPane implements ActionListener {
 

@@ -1,4 +1,4 @@
-package com.github.hiiok.simpleweather.networking;
+package com.github.mirozek.simpleweather.networking;
 
 public interface InterfaceWeatherForecastURL {
     static String createWeatherForecastUrl(String zipCode) {

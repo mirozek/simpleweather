@@ -1,4 +1,4 @@
-package com.github.hiiok.simpleweather.dto;
+package com.github.mirozek.simpleweather.dto;
 
 import java.awt.GridBagConstraints;
 import java.util.HashMap;
@@ -8,8 +8,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import com.github.hiiok.simpleweather.gui.MainWindowComponentSpec;
-import com.github.hiiok.simpleweather.gui.MainWindowComponentsPopulator;
+
+import com.github.mirozek.simpleweather.gui.MainWindowComponentSpec;
+import com.github.mirozek.simpleweather.gui.MainWindowComponentsPopulator;
 
 public class MainWindowComponentDetails {
 
