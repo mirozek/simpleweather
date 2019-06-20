@@ -1,4 +1,4 @@
-package model;
+package com.github.mirozek.simpleweather.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
