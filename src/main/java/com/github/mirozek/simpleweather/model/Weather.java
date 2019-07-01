@@ -11,11 +11,21 @@ import javax.persistence.Table;
 @Table(name = "weather")
 public class Weather {
     private long id;
-    String cityName;
-    String temperature;
-    String zipCode;
-    String wind;
-    String pressure;
+
+    @Column(name = "city_name", nullable = false)
+    private String cityName;
+
+    @Column(name = "temperature", nullable = false)
+    private String temperature;
+
+    @Column(name = "zip_code", nullable = false)
+    private String zipCode;
+
+    @Column(name = "wind", nullable = false)
+    private String wind;
+
+    @Column(name = "pressure", nullable = false)
+    private String pressure;
 
     public Weather() {
     }
@@ -39,7 +49,6 @@ public class Weather {
         this.id = id;
     }
 
-    @Column(name = "city_name", nullable = false)
     public String getCityName() {
         return cityName;
     }
@@ -48,7 +57,7 @@ public class Weather {
         this.cityName = cityName;
     }
 
-    @Column(name = "temperature", nullable = false)
+
     public String getTemperature() {
         return temperature;
     }
@@ -57,7 +66,7 @@ public class Weather {
         this.temperature = temperature;
     }
 
-    @Column(name = "zip_code", nullable = false)
+
     public String getZipCode() {
         return zipCode;
     }
@@ -66,7 +75,6 @@ public class Weather {
         this.zipCode = zipCode;
     }
 
-    @Column(name = "wind", nullable = false)
     public String getWind() {
         return wind;
     }
@@ -75,7 +83,7 @@ public class Weather {
         this.wind = wind;
     }
 
-    @Column(name = "pressure", nullable = false)
+
     public String getPressure() {
         return pressure;
     }

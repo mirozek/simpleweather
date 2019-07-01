@@ -12,7 +12,7 @@ import com.github.mirozek.simpleweather.networking.ConnectionLogic;
 public class WeatherComponent {
 
     public JButton weatherComponent;
-    Map<String, JTextField> textFields;
+    public static Map<String, JTextField> textFields;
 
     public WeatherComponent(Map<String, JTextField> textFields) {
         weatherComponent = new JButton("Get Weather");
@@ -51,5 +51,9 @@ public class WeatherComponent {
         // get value of pressure
         String getPressure = weatherResult.getPressure();
         textFields.get("pressureTextField").setText(getPressure);
+    }
+
+    public Map<String, JTextField> getTextFields() {
+        return textFields;
     }
 }
