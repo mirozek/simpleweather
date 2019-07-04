@@ -11,7 +11,7 @@ import java.net.URL;
 
 public class ConnectionLogic implements InterfaceWeatherForecastURL {
     private JSONObject jsonObject;
-    private final double Kelwin = 237.15;
+    private final double Kelwin = 273.15;
 
     public ConnectionLogic(String zipCode) {
         String url = InterfaceWeatherForecastURL.createWeatherForecastUrl(zipCode);
@@ -46,12 +46,12 @@ public class ConnectionLogic implements InterfaceWeatherForecastURL {
     }
 
     private String getTemp() {
-        double temp = jsonObject.getJSONObject("main").getDouble("temp");
+        final double temp = jsonObject.getJSONObject("main").getDouble("temp");
         return String.format("%.1f C", temp - Kelwin);
     }
 
     private String getPressure() {
-        double pressure = jsonObject.getJSONObject("main").getDouble("pressure");
+        final double pressure = jsonObject.getJSONObject("main").getDouble("pressure");
         return String.format("%.0f hPa", pressure);
     }
 
@@ -60,10 +60,9 @@ public class ConnectionLogic implements InterfaceWeatherForecastURL {
     }
 
     private String getWindSpeed() {
-        double speed = jsonObject.getJSONObject("wind").getDouble("speed");
+        final double speed = jsonObject.getJSONObject("wind").getDouble("speed");
         return String.format("%.1f m/s", speed);
     }
-
 
 
     private static synchronized String readUrl(String urlString) throws Exception {
