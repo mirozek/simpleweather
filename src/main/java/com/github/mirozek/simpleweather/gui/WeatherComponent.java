@@ -7,7 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 
 import com.github.mirozek.simpleweather.dto.WeatherResult;
-import com.github.mirozek.simpleweather.networking.ConnectionLogic;
+import com.github.mirozek.simpleweather.networking.WeatherDataRemoteService;
 
 public class WeatherComponent {
 
@@ -31,7 +31,7 @@ public class WeatherComponent {
             return;
         }
         // get value of temperature;
-        ConnectionLogic conn = new ConnectionLogic(zipCode);
+        WeatherDataRemoteService conn = new WeatherDataRemoteService(zipCode);
         if (conn == null) {
             return;
         }

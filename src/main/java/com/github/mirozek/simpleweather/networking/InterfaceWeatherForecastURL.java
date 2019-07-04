@@ -1,6 +1,5 @@
 package com.github.mirozek.simpleweather.networking;
 
-//powinna być zwykła klasa.
 public interface InterfaceWeatherForecastURL {
     static String createWeatherForecastUrl(String zipCode) {
         return "http://api.openweathermap.org/data/2.5/weather?zip=" + zipCode

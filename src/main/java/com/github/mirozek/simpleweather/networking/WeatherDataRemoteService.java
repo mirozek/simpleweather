@@ -9,11 +9,11 @@ import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-public class ConnectionLogic implements InterfaceWeatherForecastURL {
+public class WeatherDataRemoteService implements InterfaceWeatherForecastURL {
     private JSONObject jsonObject;
-    private final double Kelwin = 273.15;
+    private final double KELWIN = 273.15;
 
-    public ConnectionLogic(String zipCode) {
+    public WeatherDataRemoteService(String zipCode) {
         String url = InterfaceWeatherForecastURL.createWeatherForecastUrl(zipCode);
         try {
             String result = readUrl(url);
@@ -47,7 +47,7 @@ public class ConnectionLogic implements InterfaceWeatherForecastURL {
 
     private String getTemp() {
         final double temp = jsonObject.getJSONObject("main").getDouble("temp");
-        return String.format("%.1f C", temp - Kelwin);
+        return String.format("%.1f C", temp - KELWIN);
     }
 
     private String getPressure() {
